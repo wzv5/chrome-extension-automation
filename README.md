@@ -1,4 +1,4 @@
-## Extension Automation 
+## Extension Automation （瞎鸡巴乱改能用版）
 Automatically enables and disables extensions for specified sites. For simpler browsing and better performance.
 
 I'm no longer actively maintaining this, so I put it online for those who want to tweak it (pull requests accepted). It was written a long time ago, so the code is a bit on the ugly side. The manifest is also not updated with chrome's frequently changing manifest specifications.
