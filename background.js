@@ -1,15 +1,6 @@
-<!doctype html>
-<html>
-<head>
-<title>Extension Automation Background Page</title>
-</head>
-
-<body>
-<script>
-
 function resetStates() {
-	
-	for (key in localStorage) {
+	for (var i = 0; i < localStorage.length; i++) {
+		var key = localStorage.key(i);
 		if (key == "undefined" || typeof (key) == undefined|| key == "firstRun") {
 			continue;
 		}
@@ -20,7 +11,8 @@ function resetStates() {
 }
 
 function checkForValidUrl(tab) {
-	for (key in localStorage) {
+	for (var i = 0; i < localStorage.length; i++) {
+		var key = localStorage.key(i);
 		if (key == "undefined" || typeof (key) == undefined|| key == "firstRun") {
 			continue;
 		}
@@ -47,7 +39,8 @@ function setExt() {
 	chrome.browserAction.setBadgeText({
 		text: ""
 	});
-	for (key in localStorage) {
+	for (var i = 0; i < localStorage.length; i++) {
+		var key = localStorage.key(i);
 		if (key == "undefined" || typeof (key) == undefined || key == "firstRun") {
 			continue;
 		}
@@ -129,7 +122,3 @@ chrome.windows.getAll({
 	}
 	setExt();
 });
-</script>
-</body>
-</html>
-
